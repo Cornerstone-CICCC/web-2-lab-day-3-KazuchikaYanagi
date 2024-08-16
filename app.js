@@ -58,6 +58,7 @@ let sectionThreeTl = gsap.timeline({
     trigger: ".section3",
     start: "top 80%",
     end: "bottom center",
+    toggleActions: "play none none reverse",
     markers: true,
   },
 });
@@ -147,7 +148,9 @@ const sep = document.querySelector(".section5 div h2");
 sep.innerHTML = "";
 
 newArr.forEach((el) => {
+  const preEl = document.createElement("pre");
   const getEl = document.createElement("span");
+
   getEl.textContent = el;
   //   if (getEl.witdh > 0) sep.append(getEl);
   //   else getEl.style.fontSize = "1rem";
